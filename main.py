@@ -60,6 +60,8 @@ class InstagramBot:
     
     def like_person_post(self, person_username):
         driver = self.driver
+        # go to home page first
+        driver.get("https://www.instagram.com/")
         search_box = driver.find_element_by_xpath("//div[@class='eyXLr wUAXj ']")
         search_box.click()
         
