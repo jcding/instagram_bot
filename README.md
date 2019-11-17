@@ -11,7 +11,7 @@ git clone https://github.com/jcding/instagram_bot.git
 ### Prerequisites
 
 Requires:
-    - Python 3
+* Python 3
 
 ```
 pip3 install --upgrade pip
