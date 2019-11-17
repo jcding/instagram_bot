@@ -12,6 +12,7 @@ git clone https://github.com/jcding/instagram_bot.git
 
 Requires:
 * Python 3
+* geckodriver
 
 ```
 pip3 install --upgrade pip
