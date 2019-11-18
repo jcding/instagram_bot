@@ -1,4 +1,4 @@
 # Log Files
 *.log
-
+*.sqlite3
 __pycache__/
