@@ -17,6 +17,7 @@ Requires:
 ```
 pip3 install --upgrade pip
 pip3 install selenium
+pip3 install chatterbot
 ```
 
 ### Installing
