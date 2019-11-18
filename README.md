@@ -1,6 +1,6 @@
 # Instagram Bot
 
-Too lazy to go on Instagram to engage with others? Too busy to grow your Instagram account by yourself? Don't worry, the Instagram Bot has got your back! It will like people's posts for you. Soon it will be able to reply to other people's comments using MACHINE LEARNINGGG 😲😲
+Too lazy to go on Instagram to engage with others? Too busy to grow your Instagram account by yourself? Don't worry, the Instagram Bot has got your back! It will like people's posts for you. It uses training data and Chatterbot to automatically respond to comments 😲😲
 
 ## Getting Started
 
