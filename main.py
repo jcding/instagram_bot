@@ -4,6 +4,8 @@ import time
 import re
 import getpass
 
+from commenter import Commenter
+
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
@@ -100,7 +102,14 @@ class InstagramBot:
                 # time.sleep(19)
             except:
                 print("Already liked picture: " + pic_url)
-                
+
+    def comment(self, url):
+        driver = self.driver
+        driver.get(url)
+        time.sleep(2)
+        CommenterBot = Commenter(driver)
+        CommenterBot.write_comment("this is a random comment")
+
 
 def main():
     username = input("What is your Instagram username? ")
@@ -116,7 +125,8 @@ def main():
         print("What would you like to do today?")
         print("Options:")
         print("\t'like-user-pics': like all pictures from a specific user")
-        print("\t'chat': use machine learning to automatically chat with users")
+        print("\t'comment': use machine learning to automatically chat with users")
+        print("\t'exit': exit the program")
         print()
         option = input("Enter: ")
         type(option)
@@ -126,8 +136,10 @@ def main():
             IGBot.like_person_post(like_user)
             print("Success")
             print()
-        elif(option == "chat"):
-            print("Sorry this option has not been implemented yet")
+        elif(option == "comment"):
+            IGBot.comment("https://www.instagram.com/p/B4_scc0nWTB/")
+        elif(option == "exit"):
+            break
         else:
             print("Sorry, not a valid option")
 
