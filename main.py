@@ -46,7 +46,7 @@ class InstagramBot:
         password_elem.send_keys(self.password)
         password_elem.send_keys(Keys.RETURN)
 
-        time.sleep(2)
+        time.sleep(4)
         # if we find the "Turn on Notifications" box
         try:
             notification_elem = driver.find_element_by_xpath("//div[@role='dialog']")
@@ -74,7 +74,7 @@ class InstagramBot:
         enter_name.send_keys(Keys.RETURN)
         time.sleep(2)
 
-        for i in range (1,3):
+        for i in range (1,10):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
             time.sleep(2)
 
@@ -112,11 +112,12 @@ class InstagramBot:
 
 
 def main():
-    username = input("What is your Instagram username? ")
-    type(username)
+    # username = input("What is your Instagram username? ")
+    # type(username)
+    print("Username: jsondingding")
     password = getpass.getpass("What is your Instagram password? ")
 
-    IGBot = InstagramBot(username, password)
+    IGBot = InstagramBot("jsondingding", password)
     IGBot.login()
 
     

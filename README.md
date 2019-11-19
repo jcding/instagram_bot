@@ -25,9 +25,15 @@ pip3 install chatterbot
 All you need to do is:
 
 ```
-python3 main.py
+cd instagram_bot
+source bin/activate
+pip install -e .
 ```
 
+### Running
+```
+python3 main.py
+```
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.

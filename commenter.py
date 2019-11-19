@@ -39,7 +39,7 @@ class Commenter:
             print("Can't post comment")
             pass
 
-        driver.refresh()
+        self.driver.refresh()
             
             
             
