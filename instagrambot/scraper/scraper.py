@@ -24,6 +24,7 @@ class Scraper:
 def main():
     Scrape_Tool = Scraper()
     Scrape_Tool.scrape()
+    
 
 
 if __name__ == "__main__":
