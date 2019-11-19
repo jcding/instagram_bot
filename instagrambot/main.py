@@ -3,14 +3,15 @@ from selenium.webdriver.common.keys import Keys
 import time
 import re
 import getpass
+from instagrambot.model import get_gecko
 
 from instagrambot.commenter import Commenter
-
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.driver = webdriver.Firefox(executable_path=r'./geckodriver.exe')
+        geckodir = get_gecko()
+        self.driver = webdriver.Firefox(executable_path=geckodir)
 
     def closeBrowser(self):
         self.driver.close()

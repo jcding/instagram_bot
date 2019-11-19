@@ -6,11 +6,11 @@ from urllib.request import urlopen
 import json
 # from pandas.io.json import json_normalize
 # import pandas as pd, numpy as np
-from instagrambot import main
-
+from instagrambot.main import InstagramBot
+from instagrambot.model import get_gecko
 class Scraper:
     def __init__(self):
-        self.driver = webdriver.Firefox(executable_path=r'/mnt/c/Users/jason/Documents/instagrambot/geckodriver.exe')
+        self.driver = webdriver.Firefox(executable_path=get_gecko())
 
     
     def scrape(self):
