@@ -84,6 +84,8 @@ class InstagramBot:
         pic_hrefs = []
         pattern = re.compile("https://www.instagram.com/p/*")
 
+        
+
         for elem in hrefs:
             url = elem.get_attribute('href')
             if (pattern.match(url)):

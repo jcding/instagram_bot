@@ -28,9 +28,22 @@ pip install -e .
 ```
 
 ### Running
+Running Instagram Bot:
 ```
 python3 main.py
 ```
+
+Training the Commenting AI:
+```
+cd instagrambot/comment_bot
+
+# Training the AI
+python3 bot_training.py
+
+# Conversate with the AI through the command line
+python3 conversate.py
+```
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
