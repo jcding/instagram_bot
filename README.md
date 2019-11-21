@@ -60,4 +60,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* None so far but you can be added in this section for contributions!
+* Thanks to [ping](https://github.com/ping) for his Instagram API: (https://github.com/ping/instagram_private_api)
