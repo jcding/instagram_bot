@@ -25,6 +25,10 @@ All you need to do is:
 cd instagram_bot
 source bin/activate
 pip install -e .
+
+# Install Instagram API tool used for comment scraping
+pip install git+https://git@github.com/ping/instagram_private_api.git@1.6.0
+pip install git+https://git@github.com/ping/instagram_private_api.git@1.6.0 --upgrade
 ```
 
 ### Running
