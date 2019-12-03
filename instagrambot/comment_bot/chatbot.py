@@ -2,7 +2,7 @@ from chatterbot import ChatBot
 
 
 
-chatbot = ChatBot('Brandon')
+chatbot = ChatBot('Brandon', storage_adapter='chatterbot.storage.SQLStorageAdapter', database_uri='sqlite:///comment_bot/db.sqlite3')
 
 
 
