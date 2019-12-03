@@ -111,7 +111,7 @@ class InstagramBot:
         driver.get(url)
         time.sleep(2)
         CommenterBot = Commenter(driver)
-        CommenterBot.write_comment("this is a random comment")
+        CommenterBot.write_comment()
 
 
 def main():
@@ -141,7 +141,7 @@ def main():
             print("Success")
             print()
         elif(option == "comment"):
-            IGBot.comment("https://www.instagram.com/p/B4_scc0nWTB/")
+            IGBot.comment("https://www.instagram.com/p/B5mG1n0lnIM/")
         elif(option == "exit"):
             break
         else:

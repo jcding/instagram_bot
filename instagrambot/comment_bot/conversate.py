@@ -1,8 +1,9 @@
 from chatterbot import ChatBot
-from chatbot import chatbot
 
+
+brandon = ChatBot('Brandon')
 
 while True:
     request = input("You: ")
-    response = chatbot.get_response(request)
+    response = brandon.get_response(request)
     print("Bot: ", response)
