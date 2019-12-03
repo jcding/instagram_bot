@@ -5,7 +5,7 @@ import re
 import getpass
 from instagrambot.model import get_gecko
 
-from instagrambot.commenter import Commenter
+from instagrambot.comment_bot.commenter import Commenter
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
@@ -141,7 +141,7 @@ def main():
             print("Success")
             print()
         elif(option == "comment"):
-            IGBot.comment("https://www.instagram.com/p/B5mG1n0lnIM/")
+            IGBot.comment("https://www.instagram.com/p/B5mDLEXlU9a/")
         elif(option == "exit"):
             break
         else:

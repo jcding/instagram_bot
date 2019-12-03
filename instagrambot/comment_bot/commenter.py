@@ -11,20 +11,13 @@ from chatterbot import ChatBot
 from instagrambot.comment_bot.chatbot import chatbot
 
 
+
 class Commenter:
     def __init__(self, driver):
         self.driver = driver
     
     def write_comment(self):
-        text = self.get_comments()
-
-        # try:
-        #     comment_button = lambda: self.driver.find_element_by_xpath("//span[@aria-label='Comment']")
-        #     comment_button.click()
-        #     print("Clicked comment button")
-        # except:
-        #     print("Can't click comment button")
-        #     pass
+        time.sleep(2)
 
         try:
             comment_box_click = self.driver.find_element_by_xpath("//textarea[@aria-label='Add a comment…']")
@@ -34,24 +27,30 @@ class Commenter:
             print("Can't click on comment box")
             pass
 
-        try:
-            comment_box_elem = self.driver.find_element_by_xpath("//textarea[@aria-label='Add a comment…']")
-            print("getting response")
+        # try:
+        comment_box_elem = self.driver.find_element_by_xpath("//textarea[@aria-label='Add a comment…']")
+        print("getting response")
             
-            bot = ChatBot('Brandon')
-            generated_comment = str(bot.get_response(text))
-            
-            print("got response")
-            print ("User Comment: " + text)
-            print("Bot response: " + generated_comment)
+            # pic_comment = str(re.sub(r'#.\w*', '', self.get_comments()))
+        
+        # chatbot = ChatBot('Brandon')
+        # chatbot.set_trainer(ListTrainer)
 
-            # for letter in generated_comment:
-            #     comment_box_elem.send_keys(letter)
-            #     time.sleep(random.randint(1,7)/30)
-            # comment_box_elem.send_keys(Keys.RETURN)
-        except:
-            print("Can't post comment")
-            pass
+        pic_comment = self.get_comments().replace('#', '')
+        pic_comment = pic_comment.replace('\n', ' ')
+        pic_comment = str(pic_comment)
+        generated_comment = str(chatbot.get_response(pic_comment))
+        print("got response")
+        print ("User Comment: " + pic_comment)
+        print("Bot response: " + generated_comment)
+
+        for letter in generated_comment:
+            comment_box_elem.send_keys(letter)
+            time.sleep(random.randint(1,7)/30)
+        comment_box_elem.send_keys(Keys.RETURN)
+        # except:
+        #     print("Can't post comment")
+        #     pass
 
         time.sleep(2)
         self.driver.refresh()
@@ -60,8 +59,11 @@ class Commenter:
         time.sleep(2)
         comment_block = self.driver.find_element_by_xpath("//div[@class='C4VMK']")
         
-        user_comment = comment_block.find_element_by_xpath("//span[not(@*)]").text
-        print (user_comment)
+        try:
+            user_comment = comment_block.find_element_by_xpath("//span[@title='Edited']").text
+        except:
+            user_comment = comment_block.find_element_by_xpath("//span[not(@*)]").text
+
 
         return user_comment
             

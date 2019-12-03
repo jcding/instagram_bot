@@ -30,5 +30,5 @@ for data in my_data:
     print(data)
     trainer.train(data)
 
-for convo in comments[:10000]:
+for convo in comments:
     trainer.train(convo)
